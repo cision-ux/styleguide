@@ -3,4 +3,10 @@ layout: default
 title: ""
 description: ""
 ---
-<h1>hellow world</h1>
+<h1>hello world</h1>
+
+<h2>test</h2>
+
+{% for component in site.components %}
+  {{ component.content }}
+{% endfor %}

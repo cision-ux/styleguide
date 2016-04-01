@@ -1,0 +1,25 @@
+//
+// Badges
+// --------------------------------------------------
+
+.badge-number {
+  @include border-radius(50%);
+  border: 1px solid $gray-light;
+  color: $gray;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: $font-size-h3;
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: 100;
+  @media (min-width: $screen-sm) and (max-width: $screen-md) {
+    font-size: $font-size-base;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+  }
+}
+

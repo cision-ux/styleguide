@@ -1,0 +1,49 @@
+.search-bar {
+  margin-top: ($padding-large-vertical * 2);
+  button.close {
+    opacity: 1;
+    i {
+      color: $gray;
+    }
+  }
+  .modal-dialog {
+    margin-top: ($padding-large-vertical * 1.7);
+  }
+  .modal-header {
+    border: none;
+    margin-bottom: ($padding-large-vertical * 2)
+  }
+  .modal-content {
+    background: none;
+    box-shadow: none;
+    border: none;
+  }
+  .form-control {
+    height: auto;
+    border-color: $gray-light;
+  }
+  .form-control {
+    z-index: 3;
+    height: 33px;
+    border-right: transparent;
+    box-shadow: none;
+    color: #000;;
+  }
+  .btn-search {
+    height: 33px;
+    background: $brand-secondary;
+    border-color: $brand-secondary;
+    color: #fff;
+    transition: all 100ms ease-in;
+    i {
+      margin-left: $padding-large-vertical;
+    }
+    &:disabled {
+      opacity: 1;
+      background-color: #fff;
+      border-color: $gray-light;
+      border-left-color: #fff;
+      color: $brand-secondary;
+    }
+  }
+}

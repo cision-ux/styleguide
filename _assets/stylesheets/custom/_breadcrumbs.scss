@@ -1,0 +1,32 @@
+.breadcrumb-container {
+  border-bottom: 3px solid $gray-lighter;
+}
+.breadcrumb {
+  margin-bottom: 0;
+  > li {
+    font-size: 14px;
+    color: $breadcrumb-color;
+    + li:before {
+      font: $breadcrumb-font;
+      content: $breadcrumb-separator;
+      color: $gray-light;
+      padding: 0 10px;
+    }
+    > a {
+      color: $gray;
+    }
+  }
+  > .active {
+    font-weight:bold;
+  }
+  > .home {
+    position: relative;
+    top: -1px;
+    :hover {
+      color: $brand-secondary;
+    }
+    i {
+      font-size: 18px;
+    }
+  }
+}

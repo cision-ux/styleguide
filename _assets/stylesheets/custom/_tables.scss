@@ -1,0 +1,54 @@
+.table-responsive {
+  margin-bottom: 0;
+}
+
+.release-table {
+  margin-bottom: ($padding-large-vertical * 4);
+  &.table-wide {
+    border: 1px solid $gray-light;
+    .table-bordered {
+      border: none;
+      th:first-child,
+      td:first-child {
+        border-left: none;
+      }
+      th:last-child,
+      td:last-child {
+        border-right: none;
+      }
+    }
+  }
+  .table {
+    margin-bottom: 0;
+  }
+  * {
+    font-size: 10px!important;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.no-container {
+  overflow-x: scroll;
+  div {
+    overflow: visible;
+  }
+  .container {
+    overflow: visible;
+  }
+  .flickity-viewport {
+    overflow: hidden;
+  }
+  .table-wide {
+    border: none;
+    .table-bordered {
+      border: 1px solid $gray-light;
+    }
+  }
+}
+
+// TODO improve this
+.news-release .divOverflow {
+  margin-bottom: 35px;
+}

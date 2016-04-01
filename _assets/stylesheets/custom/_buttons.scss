@@ -1,0 +1,118 @@
+//
+// Buttons
+// --------------------------------------------------
+.btn-lg, .btn-group-lg > .btn,
+.btn-xs, .btn-group-xs > .btn {
+  border-radius: $border-radius-base;
+}
+
+.btn:active, .btn.active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-default:hover,
+.btn-default:active {
+  background: $gray-lightest;
+}
+
+.btn-secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+
+.btn-secondary-fill {
+  @include button-variant($btn-secondary-fill-color, $btn-secondary-fill-bg, $btn-secondary-fill-border);
+}
+
+.btn-view-larger-table {
+  i {
+    margin-right: 10px;
+  }
+}
+
+.adv-search {
+  margin-top: ($padding-small-vertical - 1);
+}
+
+.stacking-card-btn {
+  display: block;
+  font-size: $font-size-medium;
+  margin: -20px auto 20px;
+}
+
+.trending-category-btn {
+  float: left;
+  padding-top: $padding-large-horizontal;
+  padding-bottom: $padding-large-horizontal;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  @include button-variant($gray-darker, #fff, $gray-light);
+  font-size: $font-size-base;
+}
+
+.illustration-promos .btn {
+  display: block;
+  margin: $line-height-computed auto;
+  padding-right:$padding-large-horizontal * 2;
+  padding-left:$padding-large-horizontal * 2;
+  color: #fff;
+  border-color: #fff;
+  @media (max-width: $screen-md) {
+    padding-right: $padding-large-horizontal;
+    padding-left: $padding-large-horizontal;
+  }
+}
+
+.illustration-top .btn {
+  background-color: $brand-secondary;
+  &:hover {
+    background-color: darken($brand-secondary, 5%);
+  }
+}
+.illustration-left .btn {
+  background-color: $brand-secondary-light;
+  &:hover {
+    background-color: darken($brand-secondary-light, 5%);
+  }
+}
+
+.illustration-right .btn {
+  background-color: #e8bb57;
+  &:hover {
+    background-color: darken(#e8bb57, 5%);
+  }
+}
+
+.lang-switch {
+  display: inline-block;
+}
+
+.btn.btn-matrix {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1;
+  &:hover,
+  &:focus {
+    color: $gray-lightest;
+  }
+}
+
+.option-buttons {
+  text-align: center;
+}
+
+.btn-hero {
+  color: $gray-base;
+  background-color: #fff;
+  border-color: #fff;
+  &:hover {
+    color: $gray-base;
+    background-color: darken(#fff,5%);
+    border-color: darken(#fff,5%);
+  }
+  &.btn-hero-xs {
+    margin-bottom: ($padding-large-vertical * 5);
+  }
+}

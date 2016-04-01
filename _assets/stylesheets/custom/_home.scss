@@ -1,0 +1,120 @@
+.find-industry-news {
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      a {
+        display: inline-block;
+        width: 100%;
+        padding: 8px 5px;
+        border-top: 1px solid $gray-light;
+        color: $text-color;
+        &:hover,
+        &:focus {
+          background-color: $gray-lighter;
+          color: $brand-alternative;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.featured-solutions {
+  @media (max-width: $screen-sm-max) {
+    h3 {
+      margin-top: 0;
+    }
+    .row p {
+      margin-bottom: 0;
+    }
+  }
+}
+.solutions-for-you {
+  .sub {
+    margin-bottom: 5px;
+  }
+  .overlay {
+    margin-bottom: 15px;
+    @media (max-width: $screen-md-max) {
+      margin-bottom: 12px;
+    }
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 6px;
+    }
+    &.overlay--fixed-aspect {
+      @media (min-width: $screen-md) {
+        .overlay__image {
+          width: auto;
+          height: 100%;
+          img {
+            width: auto;
+            height: 100%;
+          }
+        }
+      }
+    }
+    .overlay__ratio-sizer {
+      padding-top: 128.5%;
+      @media (max-width: $screen-sm-max) {
+        padding-top: 56.3%;
+      }
+      @media (max-width: $screen-xs-max) {
+        padding-top: 45.824%;
+      }
+    }
+    .overlay__text {
+      position: absolute;
+      top: 17%;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      h3 {
+        font-size: $font-size-base;
+        font-weight: normal;
+        margin: 0;
+        text-align: center;
+      }
+      .icon {
+        font-size: 4em;
+        color: #fff;
+      }
+      @media (max-width: $screen-md-max) {
+        top: 24%;
+        h3 {
+          font-size: 11px;
+        }
+        .icon {
+          font-size: 3.5em;
+          line-height: 1.1;
+        }
+      }
+      @media (max-width: $screen-sm-max) {
+        top: 13%;
+        h3 {
+          font-size: 12px;
+        }
+      }
+      @media (max-width: $screen-xs-max) {
+        @include vertical-center;
+        h3 {
+          font-size: $font-size-h3-xs;
+        }
+        .icon {
+          font-size: 6em;
+          line-height: 1.2;
+        }
+      }
+      @media (max-width: $screen-xs) {
+        @include vertical-center;
+        h3 {
+          font-size: $font-size-h4-xs;
+        }
+        .icon {
+          font-size: 4em;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}

@@ -21,7 +21,7 @@
 
   <link rel="apple-touch-icon" href="{% asset_path apple-touch-icon.png %}">
 
-  {% stylesheet application %}
+  {% stylesheet styles %}
 </head>
 <body>
   <!--[if lt IE 8]>
@@ -29,10 +29,42 @@
       browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>
       to improve your experience.</p>
   <![endif]-->
-
-  <main role="main">
-    {{ content }}
-  </main>
+  <header class="main-header">
+    <section class="nav-junior no-margin">
+      {% include nav/junior.html %}
+    </section>
+    <section class="nav-main no-margin hidden-xs">
+      {% include nav/main.html %}
+    </section>
+  </header>
+<div class="container">
+  <div class="row">
+    <main class="col-sm-9" role="main">
+      {{ content }}
+    </main>
+    <aside class="col-sm-3" role="complementary">
+      <nav class="hidden-print hidden-xs">
+        <ul class="nav">
+          {% if page.slug == "getting-started" %}
+            {% include nav/getting-started.html %}
+          {% elsif page.slug == "css" %}
+            {% include nav/css.html %}
+          {% elsif page.slug == "components" %}
+            {% include nav/components.html %}
+          {% elsif page.slug == "js" %}
+            {% include nav/javascript.html %}
+          {% elsif page.slug == "customize" %}
+            {% include nav/customize.html %}
+          {% elsif page.slug == "about" %}
+            {% include nav/about.html %}
+          {% elsif page.slug == "migration" %}
+            {% include nav/migration.html %}
+          {% endif %}
+        </ul>
+      </nav>
+    </aside>
+  </div>
+  </div>
 
   {% javascript vendor %}
   {% javascript application %}

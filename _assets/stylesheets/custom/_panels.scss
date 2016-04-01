@@ -1,0 +1,111 @@
+
+//twitter feed
+.twitter-header {
+  iframe {
+    margin-top:5px;
+  }
+}
+
+.twitter-feed {
+  height:600px;
+  border-right: solid 1px $gray-light;
+  border-left: solid 1px $gray-light;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.tweet-card {
+  min-height: 125px;
+  margin-left:0;
+  margin-right:0;
+  padding:15px;
+  border-bottom: solid 1px $gray-light;
+  .info {
+    display:block;
+    margin-bottom: 10px;
+    .avatar img {
+      float: left;
+      width:50px;
+      height:50px;
+      margin-right: 10px;
+    }
+    .handle {
+      font-size:18px;
+      span {
+        display:block;
+        font-weight:bold;
+      }
+    }
+    .date {
+      float: right;
+    }
+  }
+  p.message {
+    clear:both;
+  }
+}
+.tweet {
+  padding:7px;
+  background: #E5E5E5;
+}
+
+//jump-to
+.jump-to {
+  background: $gray-lighter;
+  padding: 11px 20px;
+  margin-bottom:-1px;
+  .form-control {
+    display: inline-block;
+    width: 100px;
+  }
+  label,
+  input,
+  select {
+    font-weight: normal;
+    margin-right:20px;
+    @media (max-width: $screen-sm) {
+      margin-right: 0;
+    }
+  }
+  .datepicker {
+    @media (max-width: $screen-xs) {
+      margin-bottom: 10px;
+    }
+  }
+  button {
+    text-transform: uppercase;
+  }
+}
+
+// Search
+.search-panels {
+  .panel {
+    box-shadow: none;
+    a i {
+      color: $text-color;
+    }
+  }
+}
+.search-criteria {
+  ul {
+    padding: 0;
+    list-style-type: none;
+    li i {
+      cursor: pointer;
+      margin-right: 4px;
+    }
+  }
+}
+
+// Contact Us
+.contact-us {
+  .tab-content {
+    padding: 20px 0;
+  }
+  .panel-heading {
+    padding: 10px 0;
+  }
+  .panel-body {
+    padding: 15px 0;
+  }
+}

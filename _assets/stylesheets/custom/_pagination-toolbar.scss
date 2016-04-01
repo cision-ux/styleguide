@@ -1,0 +1,95 @@
+
+.pagination-bar {
+  height:60px;
+  border-top: solid 1px #d7d7d7;
+  border-bottom: solid 1px #d7d7d7;
+  @media (max-width: $screen-xs-max) {
+    height: auto;
+  }
+  .page-list {
+    text-align: right;
+  }
+  .quantity {
+    & > div {
+      display: inline-block;
+      float: left;
+      &.release-quantity {
+        @media (max-width: $screen-md) {
+          margin-top: $padding-large-vertical;
+        }
+      }
+      @media (max-width: $screen-xs-max) {
+        display: block;
+        float: none;
+      }
+    }
+  }
+  .quantity,
+  .page-list {
+    padding: 12px 0;
+    label,
+    select {
+      margin-right: 7px;
+      font-weight: normal;
+      &.pull-right-xs {
+        @media (max-width: $screen-xs) {
+          float:right;
+        }
+      }
+    }
+    .pagination {
+      margin: 0;
+    }
+    ul.pagination {
+      & > li > a {
+        color: $gray-base;
+      }
+      border-radius: 0px;
+      border-color: #d7d7d7;
+      & > li > a:hover,
+      & > .active > a {
+        background: #d7d7d7;
+        border-color: #d7d7d7;
+        &:focus {
+          color: $gray-base;
+          background: #d7d7d7;
+        }
+      }
+      & > li > a:focus {
+        color: #fff;
+        background: $brand-secondary;
+      }
+    }
+    @media (max-width: $screen-xs-max) {
+      text-align: left;
+    }
+  }
+  .quantity {
+    @media (max-width: $screen-xs-max) {
+      padding-bottom: 0;
+    }
+  }
+  .nav-pills {
+    margin-top: -3px;
+    margin-right: 15px;
+    @media (min-width: $screen-sm) and (max-width: $screen-xs-max) {
+      text-align: center;
+      & > li {
+        float:none;
+        display: inline-block;
+      }
+      margin-top: -4px;
+      margin-right: 10px;
+    }
+  }
+}
+.no-border .pagination-bar {
+  border:none;
+}
+
+.no-border {
+  .quantity,
+  .page-list {
+    padding: 12px 0;
+  }
+}

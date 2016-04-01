@@ -1,0 +1,21 @@
+.whitepaper {
+  background: #fff;
+  min-height: 200px;
+  margin: 0 15px;
+  padding: 15px 5px 5px 5px;
+  border: 1px solid $gray-lighter;
+  .inline-gallery & {
+    margin: 10px 15px 0;
+  }
+  h4 {
+    margin-top: 0;
+  }
+  img {
+    margin-bottom: 10px;
+  }
+  p {
+    &.title {
+      margin-bottom: 15px;
+    }
+  }
+}

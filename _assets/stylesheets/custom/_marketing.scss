@@ -1,0 +1,649 @@
+.solutions {
+  .theme-icons, .intro, .products, .thought-leadership {
+    border-bottom: 3px solid $gray-lighter;
+    margin-bottom: 0;
+
+    p {
+      @media (max-width: $screen-sm) {
+        text-align: left;
+      }
+    }
+  }
+  .theme-icons {
+    @media (max-width: $screen-sm) {
+      border-bottom: none;
+    }
+  }
+  .intro h2 {
+    font-family: $font-family-serif;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+  .marketing, .pr-communications, .ir-compliance, .agency, .products-overview, .product-detail {
+    .jumbotron {
+      height: 360px;
+
+      @media (max-width: $screen-xs-max) {
+        height: 270px;
+      }
+    }
+  }
+  .video-play {
+    color: #fff;
+    opacity: .8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .video-close {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    i {
+      color: #fff;
+      font-size: 3em;
+      &:hover {
+        color: $brand-secondary;
+      }
+    }
+  }
+  .video-container {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2050;
+    top: 0;
+    background: rgba(0,0,0,.8);
+    video.marketing-video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .products-grid {
+    h3 {
+      a {
+        color: $text-color;
+        &:hover {
+          color: $link-hover-color-release;
+        }
+      }
+    }
+    h4 {
+    }
+    .grid-sizer,
+    .card {
+      width: calc(50% - 10px);
+      float: left;
+    }
+    .card-full-width {
+      width: 100%;
+    }
+    .img-parent-fixed img {
+      height: auto;
+      width: 100%;
+      max-height: none;
+    }
+  }
+  .card-stacking {
+    .resources {
+      padding: 10px;
+      a {
+        color: $text-color;
+        &:hover {
+          color: $link-hover-color-release;
+        }
+      }
+    }
+    .resource-text {
+    }
+    .resource-object {
+      width: 150px;
+      margin-top: 4px;
+      margin-left: 6px;
+    }
+    p {
+      font-size: $font-size-base;
+    }
+    .solution-type {
+      color: $gray-light;
+      font-size: 85%;
+    }
+  }
+
+  .products, .thought-leadership {
+    position: relative;
+    h2 {
+      text-transform: none;
+      a {
+        padding-top: $padding-small-vertical;
+        font-family: $font-family-sans-serif;
+        font-size: $font-size-medium;
+        font-weight: 500;
+      }
+    }
+    h3, h4 {
+      margin-top: 0;
+    }
+    h4 {
+      color: $gray;
+      font-weight: normal;
+    }
+  }
+  .thought-leadership {
+    padding-bottom: 50px;
+    @media (max-width: $screen-sm) {
+      h4 {
+        margin-top: 20px;
+      }
+    }
+  }
+  a.blog-title {
+    color: $gray-dark;
+  }
+  .intro, .products, .tailored-solution {
+    p {
+      color: $gray;
+      margin-bottom: 1em;
+    }
+  }
+  .product {
+    padding-top: 70px;
+    @media (max-width: $screen-sm) {
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+    @media (max-width: $screen-xs-max) {
+      figure {
+        position: static;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .product-info {
+    width: 100%;
+    max-width: 28.125em;
+    margin: 100px auto;
+    @media (max-width: $screen-xs-max) {
+      margin: 0 auto 30px;
+    }
+  }
+  .product.targeting {
+    min-height: 550px;
+    @media (max-width: $screen-xs-max) {
+      min-height: 0;
+    }
+  }
+  .laptop {
+
+  }
+  .imac {
+  }
+}
+
+.resources {
+
+}
+
+.knowledge-center {
+  .grid-sizer, .tile {
+    width: 24%;
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
+  }
+  .gutter-sizer {
+    width: 1.3%;
+    @media (max-width: $screen-xs-max) {
+      width: 0;
+    }
+  }
+  .tile {
+    padding: $padding-large-vertical * 2;
+    transition: box-shadow 200ms ease-in;
+    @media (max-width: $screen-xs-max) {
+      border: 0;
+      padding: 0;
+    }
+    &:hover {
+      box-shadow: 0px 2px 4px 0px rgba(0,0,0,.1);
+      transition: box-shadow 50ms ease-in;
+      @media (max-width: $screen-xs-max) {
+        box-shadow: none;
+      }
+    }
+    img {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.kc-grid {
+  a {
+    color: #fff;
+    &:hover {
+      .overlay__color {
+        opacity: .9;
+      }
+      h2 {
+        text-decoration: underline;
+      }
+    }
+  }
+  h2 {
+    @include headline('h5');
+  }
+  .overlay__text {
+    padding-left: 20px;
+    position: absolute;
+    top: 0;
+  }
+  h5 {
+    color: $gray-light;
+  }
+}
+
+.kc-grid__item {
+
+}
+
+.kc-grid__item_full-height {
+  height: 300px;
+}
+
+.kc-grid__item_half-height {
+  height: 150px;
+}
+
+.meta.meta__kc {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+// PDP
+
+.pdp-features {
+  .feature-list-container {
+    display: table;
+    width: 100%;
+    height: 100%;
+    .feature-list-cell {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  ul {
+    -webkit-padding-start: $padding-large-horizontal;
+    line-height: 1.8;
+  }
+  .overlay {
+    height: 258px;
+    @media (max-width: $screen-md-max) {
+      height: 211px;
+    }
+    @media (max-width: $screen-sm-max) {
+      height: 159px;
+    }
+    @media (max-width: $screen-xs-max) {
+      height: 299px;
+    }
+    @media (max-width: $screen-xs) {
+      height: 170px;
+    }
+  }
+}
+
+.pdp-case-studies {
+  background: $gray-lightest;
+  padding-top: ($padding-large-vertical * 3);
+  padding-bottom: ($padding-large-vertical * 8);
+
+  img {
+    max-height: 170px;
+  }
+  .tile {
+    color: $gray;
+    background: #fff;
+    border: 1px solid $gray-light;
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: ($padding-large-vertical * 2);
+    }
+    .tile-inner {
+      padding: ($padding-large-vertical * 2);
+      &.image-parent {
+        display: table;
+        width: 100%;
+        min-height: 160px;
+        border-bottom: 1px solid $gray-light;
+        .image {
+          display:table-cell;
+          text-align: center;
+          vertical-align: middle;
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    a {
+      display: block;
+      margin: 15px 0 0;
+      color: $brand-secondary;
+    }
+  }
+}
+
+.pdp-testimonials {
+  .img-parent-fixed {
+    @media (max-width: $screen-xs-max) {
+      border: 1px solid $gray-light;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  .img-parent-fixed img {
+    max-width: 80%;
+    max-height: 80%;
+    @media (max-width: $screen-xs-max) {
+      margin: 0 auto;
+    }
+  }
+  .img-thumbnail {
+    border-radius: 0;
+  }
+  .img-ratio-sizer {
+    padding-top: 100%;
+  }
+  .testimonial-signature {
+    display: block;
+    text-align: right;
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.pdp-more-products {
+  h3 a {
+    color: $text-color;
+    &:hover {
+      color: $link-hover-color-release;
+    }
+  }
+  .img-parent-fixed img {
+    height: auto;
+    width: 100%;
+    max-height: none;
+  }
+}
+
+.theme-icons {
+  .container {
+    // padding-left: 0;
+    // padding-right: 0;
+  }
+  @media (max-width: $screen-xs-max) {
+    border-bottom: none;
+  }
+  .carousel-indicators {
+    position: relative;
+    margin-bottom: 0;
+    display: inline-block;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    ul {
+    }
+    li {
+      position: relative;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 0;
+      width: 122px;
+      height: 171px;
+      border: none;
+      text-indent: 0;
+
+      @media (max-width: $screen-xs-max) {
+        width: 100%;
+        height: 30px;
+        border-bottom: 2px solid $gray-light;
+      }
+      &.active,
+      &:hover {
+        background-color: $brand-secondary-lighter;
+        color: $brand-secondary;
+      }
+    }
+    li + li {
+      margin-left: 60px;
+      @media (max-width: $screen-xs-max) {
+        margin-left: 0;
+      }
+    }
+    @media (min-width: $screen-xs-max) {
+      li + li::before {
+        content: "\f105";
+        font-family: FontAwesome;
+        font-size: 40%;
+        position: absolute;
+        left: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $gray-light;
+        font-size: 3em;
+      }
+    }
+    i {
+      vertical-align: middle;
+      font-size: 8em;
+      line-height: 1.2
+    }
+    .caption {
+      display: block;
+      line-height: 1;
+      font-size: 1.2em;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+  }
+  color: $brand-action;
+  text-align: center;
+}
+
+.next-step {
+  background-color: $gray-lightest;
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 30px;
+  i {
+    font-size: 8em;
+    color: $brand-action;
+  }
+}
+.tailored-solution {
+  &.pdp-tailored-solution {
+    background: $gray-lightest;
+    padding-top: ($padding-large-vertical * 3);
+    padding-bottom: ($padding-large-vertical * 8);
+    h2 {
+      font-family: $font-family-serif;
+    }
+    h2,
+    p {
+      text-align: left;
+    }
+  }
+  li + li {
+    margin-left: 90px;
+    @media (max-width: $screen-md-max) {
+      margin-left: 50px;
+    }
+    @media (max-width: $screen-sm-max) {
+      margin-left: 40px;
+    }
+    @media (max-width: $screen-sm) {
+      margin-left: 0;
+    }
+  }
+  i {
+    font-size: 8em;
+    @media (max-width: $screen-sm-max) {
+      font-size: 4.5em;
+    }
+    color: $brand-secondary;
+  }
+  h4 {
+    margin-top: 50px;
+    color: $gray-dark;
+  }
+  @media (max-width: $screen-sm) {
+    h3, p {
+      text-align: left;
+    }
+    li {
+      width: 49%;
+      font-size: 12px;
+    }
+  }
+}
+
+.solutions-options {
+  background-color: $gray-lightest;
+  padding-bottom: 20px;
+  h3 {
+    text-align: center;
+  }
+  button {
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+}
+.social {
+  font-size: .5rem;
+  i {
+    color: $gray;
+  }
+  li + li {
+    margin-left: 30px;
+  }
+}
+
+// TODO fix the footer shit on DEV & STAGE; they are writing crap
+
+.footer-fixed-mkt {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1500;
+  margin-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  background-color: rgba( $brand-primary, .9 );
+  text-align: center;
+  color: #fff;
+  .call-us {
+    display: block;
+    a {
+      color: #fff;
+    }
+  }
+}
+.call-us {
+  margin-left: 15px;
+}
+
+.blog__listing, .blog__body {
+  margin-bottom: 20px;
+  .meta__blog-taxonomy, .comments {
+    color: $gray;
+    margin-bottom: 30px;
+
+    a {
+      color: $gray;
+      &:hover {
+        color: $brand-secondary;
+      }
+    }
+  }
+  .social-links {
+    li {
+      margin-bottom: 10px;
+    }
+    .social-facebook a {
+      padding: 0 30px;
+      @media (max-width: $screen-xs-max) {
+        padding: 6px 20px;
+      }
+    }
+    .social-twitter a {
+      padding: 0 26px;
+      @media (max-width: $screen-xs-max) {
+        padding: 6px 16px;
+      }
+    }
+  }
+}
+
+.blog__listing, .blog__entry {
+  .media-object {
+    width: 75px;
+  }
+}
+
+.blog__entry-text {
+  font-size: $font-size-base;
+  line-height: $line-height-small;
+  color: $text-color;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.blog__entry-comment-author {
+  margin-bottom: 10px;
+}
+
+.abstract, .blog__entry {
+  img {
+    margin-bottom: 15px;
+  }
+}
+
+
+.subscribe, .categories {
+  margin-bottom: 20px;
+}
+
+.panel {
+  a {
+    color: $text-color;
+    &:hover {
+      color: $brand-secondary;
+    }
+  }
+  .media-object {
+    width: 45px;
+  }
+}
+
+.nav-subnav {
+  .btn-secondary-fill:not(.active) {
+    background-color: #fff;
+    color: $brand-secondary;
+  }
+  .btn-secondary-fill.active {
+    box-shadow: inset 1px 1px 1px 1px  $gray-light;
+  }
+}
+

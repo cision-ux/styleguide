@@ -1,0 +1,142 @@
+/***********************************/
+/* styleguide specific styles here */
+/***********************************/
+#styleguide {
+  .navbar {
+    background-color: $brand-secondary-lighter;
+    min-height: initial;
+    height: 60px;
+  }
+  @media (max-width: $screen-sm) {
+    .navbar-header,
+    .navbar-collapse {
+      line-height: 10px;
+      background-color: $brand-secondary-lighter;
+    }
+    .navbar-brand {
+      padding-top: 35px;
+      padding-bottom: 35px;      
+    }
+  }
+  @media (min-width: $screen-md) {
+    .navbar-brand,
+    .navbar-nav > li > a {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  .row {
+    padding-top: 50px;
+  } 
+  section {
+    padding-top: 10px;
+  }
+}
+.locate-code {
+  border: solid 1px $brand-secondary;
+  margin-top: -40px;
+}
+#sg-colors pre,
+#sg-buttons-links pre {
+  margin-top: 0;
+}
+
+/**********/
+/* colors */
+/**********/
+#primary-colors tbody tr {
+  &:nth-of-type(1) {
+    background-color: $brand-primary;
+    color: #fff;
+  }
+  &:nth-of-type(2) {
+    background-color: $brand-alternative;
+  }
+  &:nth-of-type(3) {
+    background-color: $brand-secondary;
+  }
+  &:nth-of-type(4) {
+    background-color: #8cc9cf;
+  }
+  &:nth-of-type(5) {
+    background-color: $brand-secondary-lighter;
+  }
+  &:nth-of-type(6) {
+    background-color: #d8a534;
+  }
+  &:nth-of-type(7) {
+    background-color: $brand-accent;
+  }
+  &:nth-of-type(8) {
+    background-color: #e8bb57;
+  }
+  &:nth-of-type(9) {
+    background-color: $brand-action;
+  }
+  &:nth-of-type(10) {
+    background-color: #db7423;
+  }
+}
+#secondary-colors tbody tr {
+  &:nth-of-type(1) {
+    background-color: #C62300;
+    color: #fff;
+  }
+  &:nth-of-type(2) {
+    background-color: #747800;
+  }
+  &:nth-of-type(3) {
+    background-color: #8560a8;
+    color: #fff;
+  }
+}
+#grayscale tbody tr {
+  &:nth-of-type(1) {
+    background-color: $gray-base;
+    color: #fff;
+  }
+  &:nth-of-type(2) {
+    background-color: $gray;
+  }
+  &:nth-of-type(3) {
+    background-color: $gray-light;
+  }
+  &:nth-of-type(4) {
+    background-color: #d7d7d7;
+  }
+  &:nth-of-type(5) {
+    background-color: $gray-lighter;
+  }
+  &:nth-of-type(6) {
+    background-color: $gray-lightest;
+  }
+}
+
+/**************/
+/* typography */
+/**************/
+#sg-typography h3 span {
+  font-family: $font-family-serif;
+}
+.header-example {
+  text-transform: capitalize;
+}
+h1.header-example {
+  text-transform: uppercase;
+}
+#section-h2 {
+  position: relative;
+  padding-bottom: $padding-large-vertical;
+  font-family: $font-family-serif;
+  border-bottom: solid 10px $brand-primary;
+}
+
+/*******/
+/* cta */
+/*******/
+#cta-dropdown .dropdown,
+#cta-dropdown .dropup {
+  margin-top: 15%;
+  margin-right: 5%;
+  display: inline-block;
+}

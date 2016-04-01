@@ -1,0 +1,147 @@
+.jumbotron {
+  height: 550px;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  margin-bottom: 0;
+  text-align: center;
+  border-bottom: none;
+  color: #fff;
+  justify-content: center;
+  resize: vertical;
+  width: 100%;
+  .jumbo-content {
+    opacity: 0;
+  }
+  @media (max-width: $screen-xs-max) {
+    height: 300px;
+  }
+
+  .jumbo-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+
+    img {
+      min-width: 100%;
+      min-height: 100%;
+      .home-page & {
+        @media (max-width: $screen-xs-max) {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+    &.grayscale img {
+      filter: grayscale(100%);
+    }
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2.5em;
+    font-size: 2em;
+    opacity: .7;
+    @media (max-width: $screen-sm-max) {
+      margin-top: .5em;
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+
+  .video-play i {
+    font-size: 4.5em;
+    margin-bottom: 10px;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-bottom: 20px;
+    @media (max-width: $screen-sm) {
+      font-size: 24px;
+    }
+  }
+  p {
+    @media (max-width: $screen-sm) {
+      font-size: 14px;
+    }
+  }
+  .overlay__color {
+    opacity: 0.6;
+  }
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .secondary-cta {
+      a {
+        color: #fff;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+          color: $gray-lightest;
+        }
+      }
+      @media (max-width: $screen-sm-max) {
+        a {
+          display: block;
+        }
+        &:first-of-type a {
+          margin-bottom: 5px;
+        }
+      }
+      @media (max-width: $screen-xs-max) {
+        a {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .page-404 & i {
+    color: lighten($brand-secondary, 20%);
+    font-size: 12em;
+    margin-bottom: 20px;
+    @media (max-width: $screen-xs-max) {
+      font-size: 4em;
+    }
+  }
+}
+
+.matrix-select {
+  margin: ($padding-large-vertical * 4) 0;
+  font-size: 2.5em;
+  line-height: 1.5;
+  text-align: none;
+  > span {
+    vertical-align: middle;
+  }
+  .dropdown {
+    display: inline-block;
+    border-bottom: 3px solid #fff;
+  }
+  .dropdown-menu {
+    min-width: 100%;
+    background: $gray-lightest;
+    border-color: $gray-lighter;
+    top: 50%;
+    transform: translateY(-50%);
+    > li > a {
+      font-size: 1.5em;
+      color: darken($gray,25%);
+      &:hover,
+      &:focus,
+      &.active {
+        background: $gray-lighter;
+      }
+    }
+  }
+}

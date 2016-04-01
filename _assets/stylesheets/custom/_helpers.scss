@@ -1,0 +1,55 @@
+.no-padding {padding: 0;}
+
+.no-top-margin,
+.mt-none { margin-top: 0!important; }
+.mt-xs { margin-top: 5px;}
+.mt-sm { margin-top: 10px;}
+.mt-md { margin-top: 15px;}
+.mt-lg { margin-top: 20px;}
+.mt-xl { margin-top: 30px;}
+
+.no-margin-bottom, // adding because it exists somewhere in prod..
+.margin-bottom-none,
+.mb-no { margin-bottom: 0px!important; }
+.margin-bottom-sm,
+.mb-sm { margin-bottom: 10px; }
+.margin-bottom-md,
+.mb-md { margin-bottom: 15px;}
+.margin-bottom-lg,
+.mb-lg { margin-bottom: 20px; }
+.margin-bottom-xl,
+.mb-xl { margin-bottom: 30px; }
+
+.mb-none-sm {
+  @media(max-width: $screen-sm-max) {
+    margin-bottom: 0!important;
+  }
+}
+
+.mb-none-xs {
+  @media(max-width: $screen-xs-max) {
+    margin-bottom: 0!important;
+  }
+}
+
+.border-left { border-left: solid 1px $gray-light; }
+
+.no-margin { margin: 0; }
+
+.no-padding-right { padding-right: 0; }
+
+.clear { clear: both; }
+
+.pull-none-xs {
+  @media(max-width: $screen-xs-max) {
+    float: none!important;
+  }
+}
+
+.btn-wrap {
+  white-space: normal;
+}
+
+a:hover.no-hover-underline {
+  text-decoration: none;
+}

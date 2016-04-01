@@ -1,0 +1,162 @@
+// border radius for all sides
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// verically center element
+// make sure parent is positioned relatively
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// verically and horizontally center element
+// make sure parent is positioned relatively
+@mixin vertical-horizontal-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+// Navbar Filter vertical align
+//
+// Vertically center elements in the navbar.
+// Example: an element has a height of 30px, so write out `.navbar-vertical-align(30px);` to calculate the appropriate top margin.
+
+@mixin navbar-filter-vertical-align($element-height) {
+  margin-top: (($navbar-filter-height - $element-height) / 2);
+  margin-bottom: (($navbar-filter-height - $element-height) / 2);
+}
+
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix($color, white, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix($color, black, $percentage);
+}
+
+@mixin word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  @media screen\0 {
+    word-break: keep-all;
+  }
+}
+
+@mixin word-wrap-reset() {
+  overflow-wrap: normal;
+  word-wrap: normal;
+  -ms-word-break: normal;
+  word-break: normal;
+  -ms-hyphens: manual;
+  -moz-hyphens: manual;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+
+// Headlines
+// TODO: Refactor this
+%headline-h1 {
+    font-size: $font-size-h1;
+  @media (max-width: $screen-md) {
+    font-size: $font-size-h1-md;
+  }
+  @media (max-width: $screen-sm) {
+    font-size: $font-size-h1-sm;
+  }
+  @media (max-width: $screen-xs) {
+    font-size: $font-size-h1-xs;
+  }
+}
+
+%headline-h2 {
+    font-size: $font-size-h2;
+  @media (max-width: $screen-md) {
+    font-size: $font-size-h2-md;
+  }
+  @media (max-width: $screen-sm) {
+    font-size: $font-size-h2-sm;
+  }
+  @media (max-width: $screen-xs) {
+    font-size: $font-size-h2-xs;
+  }
+}
+
+%headline-h3 {
+    font-size: $font-size-h3;
+  @media (max-width: $screen-md) {
+    font-size: $font-size-h3-md;
+  }
+  @media (max-width: $screen-sm) {
+    font-size: $font-size-h3-sm;
+  }
+  @media (max-width: $screen-xs) {
+    font-size: $font-size-h3-xs;
+  }
+}
+
+%headline-h4 {
+    font-size: $font-size-h4;
+  @media (max-width: $screen-md) {
+    font-size: $font-size-h4-md;
+  }
+  @media (max-width: $screen-sm) {
+    font-size: $font-size-h4-sm;
+  }
+  @media (max-width: $screen-xs) {
+    font-size: $font-size-h4-xs;
+  }
+}
+
+%headline-h5 {
+    font-size: $font-size-h5;
+  @media (max-width: $screen-md) {
+    font-size: $font-size-h5-md;
+  }
+  @media (max-width: $screen-sm) {
+    font-size: $font-size-h5-sm;
+  }
+  @media (max-width: $screen-xs) {
+    font-size: $font-size-h5-xs;
+  }
+}
+
+%headline-h6 {
+    font-size: $font-size-h6;
+  @media (max-width: $screen-md) {
+    font-size: $font-size-h6-md;
+  }
+  @media (max-width: $screen-sm) {
+    font-size: $font-size-h6-sm;
+  }
+  @media (max-width: $screen-xs) {
+    font-size: $font-size-h6-xs;
+  }
+}
+
+@mixin headline($arg) {
+    @extend %headline-#{$arg};
+}

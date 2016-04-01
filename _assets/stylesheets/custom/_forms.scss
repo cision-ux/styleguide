@@ -1,0 +1,70 @@
+.form-control {
+  color: #373737;
+}
+
+//Advanced Search
+.cb {
+  display: block;
+  font-weight: normal;
+  color: $text-color;
+  text-decoration: none;
+  margin-bottom: 5px;
+  &:focus {
+    color: $text-color;
+    text-decoration: none;
+  }
+  a,
+  a:focus {
+    color: $text-color;
+    text-decoration: none;
+  }
+  input[type="checkbox"] {
+    margin-right: 3px;
+  }
+}
+
+.cb-level-one {
+  margin-left: ($padding-large-horizontal);
+  input[type="checkbox"] {
+    margin-left: -($padding-large-horizontal);
+  }
+}
+
+.cb-level-two {
+  margin-left: ($padding-large-horizontal * 2);
+  input[type="checkbox"] {
+    margin-left: -($padding-large-horizontal);
+  }
+}
+
+.cb-level-three {
+  margin-left: ($padding-large-horizontal * 4);
+  input[type="checkbox"] {
+    margin-left: -($padding-large-horizontal * 2);
+  }
+}
+
+.cb-level-four {
+  margin-left: ($padding-large-horizontal * 6);
+  input[type="checkbox"] {
+    margin-left: -($padding-large-horizontal * 3);
+  }
+}
+
+// Datepicker
+.datepicker,
+.datepicker td,
+.datepicker th,
+.datepicker table tr td span {
+  border-radius: $border-radius-base;
+}
+
+
+// Prevent iOS Zoom on form focus
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-width: $screen-xs-max) { 
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}

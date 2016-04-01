@@ -1,0 +1,56 @@
+@media (-webkit-min-device-pixel-ratio:0) { 
+
+  // Buttons
+  .btn {
+    padding-top: ($padding-base-vertical + 1);
+  }
+  .btn-lg {
+    padding-top: ($padding-large-vertical + 1);
+  }
+  .btn-sm {
+    padding-top: ($padding-small-vertical + 1);
+  }
+  .btn-xs {
+    padding-top: ($padding-xs-vertical + 1);
+  }
+
+  // Pagination
+  .pagination > li > a,
+  .pagination > li > span {
+    padding-top: ($padding-base-vertical + 1);
+  }
+  .pagination-lg > li > a,
+  .pagination-lg > li > span {
+    padding-top: ($padding-large-vertical + 1);
+  }
+  .pagination-sm > li > a,
+  .pagination-sm > li > span {
+    padding-top: ($padding-small-vertical + 1);
+  }
+
+  // Labels
+  .label {
+    padding-top: calc(.2em + 1px);
+  }
+
+  // TODO: Inputs
+
+  // Misc
+  .find-industry-news {
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        a {
+          padding-top: 9px;
+        }
+      }
+    }
+  }
+
+  .announcement {
+    padding-top: ($padding-large-vertical * 2) + 1;
+  }
+
+}
+

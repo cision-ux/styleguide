@@ -1,0 +1,119 @@
+.nav__fullscreen-btn {
+    cursor: pointer;
+    height: 56px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    width: 56px;
+    z-index: 100;
+}
+.nav__fullscreen-btn + label {
+    display: block;
+    height: 4px;
+    height: 56px;
+    left: 18px;
+    position: absolute;
+    right: 18px;
+    top: 44px;
+    width: 56px;
+}
+.nav__fullscreen-btn + span {
+    background-color: #ccc;
+    cursor: pointer;
+    display: block;
+    height: 4px;
+    position: absolute;
+    right: 20px;
+    top: 44px;
+    width: 56px;
+    z-index: 99;
+}
+.nav__fullscreen-btn + span::before,
+.nav__fullscreen-btn + span::after {
+    background-color: #ccc;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 56px;
+}
+.nav__fullscreen-btn + span::before {
+    top: -20px;
+}
+.nav__fullscreen-btn + span::after {
+    bottom: -20px;
+}
+.nav__fullscreen-btn:checked + span {
+    background-color: #F5060A;
+}
+.nav__fullscreen-btn + span::before,
+.nav__fullscreen-btn + span::after {
+    transition-delay: 0.3s, 0s;
+    transition-duration: 0.3s, 0.3s;
+}
+.nav__fullscreen-btn + span::before {
+    transition-property: top, transform;
+}
+.nav__fullscreen-btn + span::after {
+    transition-property: bottom, transform;
+}
+.nav__fullscreen-btn:checked + span {
+    background: none;
+}
+.nav__fullscreen-btn:checked + span::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+.nav__fullscreen-btn:checked + span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+.nav__fullscreen-btn:checked + span::before,
+.nav__fullscreen-btn:checked + span::after {
+    transition-delay: 0s, 0.3s;
+}
+.nav__fullscreen-btn:checked ~ nav {
+    left: 0px;
+    opacity: 100;
+    position: fixed;
+    visibility: 1;
+    z-index: 98;
+}
+.nav__fullscreen-btn:checked ~ nav ul {
+    transform: translate(-50%, -50%);
+}
+.nav__fullscreen {
+    background: rgba(52, 82, 113, 0.98) none repeat scroll 0% 0%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 0.5s ease 0s, visibility 0s ease 0.5s;
+    visibility: 0;
+    width: 100%;
+    z-index: -1;
+}
+.nav__fullscreen ul {
+    left: 50%;
+    moz-transition: all 1s ease-in-out;
+    o-transition: all 1s ease-in-out;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, 0%);
+    transition: all 1s ease-in-out;
+    webkit-transition: all 1s ease-in-out;
+}
+.nav__fullscreen li {
+    font-size: 30px;
+    list-style: none;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.nav__fullscreen ul li a:hover {
+    color: #fff;
+}
+.nav__fullscreen li a {
+    color: #ccc;
+    text-decoration: none;
+}

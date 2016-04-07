@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+- 2.2.3
+install:
+- "./bin/setup"
+script:
+- bundle exec jekyll build --trace
+- bundle exec htmlproof ./_site --only-4xx
+after_success:
+- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && "./bin/automated"
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - USERNAME: awkale
+  - EMAIL: hi@awkale.me
+  - secure: LfxsHXCY/h1EP2ChKWHU7Ccizr7Ege0qbr3Bmx9Cn513iQQtSRRXQLyQ85uGeQ2okyNW6NKFk/3qLt2Ltw0wut8VKWBKY8wU1bE57ZOgKPIAx4OVrb9RIOOLRzVvxPdiHE8NccOMQZAsAFoKmywDjruQOTZryU6nYxlQdIbu/iSLvWm6t1lyEHMJYKqUtQI9EQHYm6GiyR4eQIOxgs3i43YRe2pt0mJPx/wJRekgmtL/slPfaWWxn5QSe1YlXNxMHBGOg9e2dnMGhZChfK5sHdoFctH2qzcmFqojKjb3wtZpQdCQVMiSY/SGRrs8HGOckCNB5BqQI1fPH2o+JPG6cGkPKny6RAP1zf1le3BQRLRrMBIwPiFyWNOfegQZLQUna+qOurBL0xgCk/+O079zvAPfpoX0OPxJC+/57cLIt7qYvHBd4UViahV+0/GRiNLfvSTK7bCeloHRsftgqOkjx10B7IXSmDdcu6Bmpi7Qxi49Q74gWfeYXpKLS9DciO5jVaUbHNdDr5SJrXgxlWw7e2V+lPYhxT0MCK30TXY0nW9K9s8V/BWDmu1jQSv+zrBgwyILpD24k7NgETvAcKTHU5woEo3BPg2zuTqYPYnK7i5F6ZbxHLg9wu6sWcnG2lT98jLVaRjjUjGee/lw3VgMkfQiQD9i71bnAugztLCjCwQ=

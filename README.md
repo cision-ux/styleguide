@@ -1,4 +1,5 @@
 # Styleguide
+[![Build Status](https://travis-ci.org/prnewswire-ux/styleguide.svg?branch=master)](https://travis-ci.org/prnewswire-ux/styleguide)
 
 ## Installation
 
